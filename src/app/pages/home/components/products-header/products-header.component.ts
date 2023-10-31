@@ -9,13 +9,17 @@ export class ProductsHeaderComponent implements OnInit  {
   sort= 'desc';
   itemsShowCount=12;
 
-  
+
   constructor (){}
 
   ngOnInit():void{}
 
   onSortUpdated(newSort:string):void {
     this.sort = newSort;
+  }
+
+  onItemsUpdated(count:number):void {
+    this.itemsShowCount = count;
   }
 
 }
