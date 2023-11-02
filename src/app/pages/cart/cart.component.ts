@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import {Cart} from 'src/app/models/cart.model';
+import {Cart, CartItem} from 'src/app/models/cart.model';
 
 @Component({
   selector: 'app-cart',
@@ -15,9 +15,21 @@ export class CartComponent implements OnInit {
     
   ]};
 
+  dataSource: Array<CartItem> = [];
+  displayedColumns: Array<string> = [
+    'product',
+    'name',
+    'price',
+    'quantity',
+    'total',
+    'action'
+  ] ;
+
+
   constructor(){}
 
   ngOnInit(): void {
+    this.dataSource = this.cart.items;
     
   }
 
