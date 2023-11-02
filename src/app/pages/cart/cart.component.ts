@@ -5,6 +5,7 @@ import { Component, OnInit} from '@angular/core';
   templateUrl: './cart.component.html'
 })
 export class CartComponent implements OnInit {
+  cart: Cart = {items: []};
 
   constructor(){}
 
